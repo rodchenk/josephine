@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Villa Josephine</title>
+	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="ionicons/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="css/daterange.css" />
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/daterange.min.js"></script>
+</head>
+<body class="bg-white">
+	<header class="text-grey text-darken-3 container-fluid row mx-auto sticky-top bg-white shadow-sm">
+		<ul class="nav justify-content-start col-9">
+			<li class="nav-item bg-transparent">
+				<a class="text-dark nav-link p-2 px-5" href="./index.html">
+					<img src="img/logo.png" class="img-fluid" style="max-height: 37px">
+				</a>
+			</li>
+			<li class="nav-item hoverable light">
+				<a class="text-dark nav-link p-3 px-4 waves-effect waves-teal" href="#">Apartments</a>
+			</li>
+			<li class="nav-item hoverable light">
+				<a class="text-dark nav-link p-3 px-4 waves-effect waves-teal" href="#">Anfahrt</a>
+			</li>
+			<li class="nav-item hoverable light">
+				<a class="text-dark nav-link p-3 px-4 waves-effect waves-teal" href="admin/index.html">Admin</a>
+			</li>
+			<li class="nav-item hoverable light">
+				<a class='dropdown-trigger text-dark nav-link p-3 px-4' href='#' data-target='dropdown1'>
+					<i class="icon ion-ios-arrow-down"></i>
+				</a>
+				<ul id="dropdown1" class="dropdown-content shadow rounded">
+					<li><a class="grey-text text-darken-3" href="#!"><i class="mr-2 icon ion-md-alarm"></i>Meine Buchungen</a></li>
+					<li><a class="grey-text text-darken-3" href="#!"><i class="mr-2 icon ion-ios-images"></i>Sehenswürdigkeiten</a></li>
+					<li><a class="grey-text text-darken-3" href="#!"><i class="mr-2 icon ion-ios-bicycle"></i>Schwarzwald</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav justify-content-end col-3 pr-0">
+			<li class="nav-item hoverable light float-right">
+				<a class="text-dark nav-link p-3 px-4 font-size-full waves-effect waves-teal font-weight-bold " href="#">
+					<span style="color: #4e8dbf">Booking</span><span class="blue-text">.com</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+	<main>
+		<div class="p-5 bg-light" style="background-image:url(img/sky.jpg);background-attachment: fixed;background-size: cover; background-position-y: -550px">
+			<div class="row">
+				<div class="container row mx-auto col-8">
+					<h2 class="text-light col-12 mb-4">Интерактивные элементы</h2>
+					<div class="row col-12">
+						<div class="col-5">
+							<label class="position-relative text-light">Zeitraum</label>
+							<div class="bg-white rounded shadow-sm">
+								<i class="icon ion-ios-calendar mx-3"></i>
+								<div class="d-inline-block">
+									<input type="text" id="date-range" class="browser-default user-custom-input" readonly>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="input-field mt-0">
+								<label class="position-relative text-light">Anzahl Gäste</label>
+								<div class="bg-white rounded shadow-sm">
+									<i class="icon ion-ios-body mx-3"></i>
+									<div class="d-inline-block">
+										<select>
+											<option value="1" selected>1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="1">4</option>
+											<option value="2">5</option>
+											<option value="3">6</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3 text-center">
+							<button class="darken-2 btn col waves-effect waves-teal shadow" style="margin-top: calc(21px + 0.5em)">
+								<i class="icon ion-ios-search mr-3"></i>Check
+							</button>
+						</div>
+						<div class="col-12">
+							<label>
+								<input type="checkbox" checked="checked" />
+								<span class="text-light" style="text-shadow:0 0 11px #000000">Flexibles Datum (+/- 3 Tage)</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p-5 bg-white border-bottom">
+			<div class="row">
+				<div class="col-5">
+					<h2>Управление апартаментами</h2>
+					<p class="line-height-2">Каждый апартамент может иметь <code>собственную</code> страницу, на которой размещены фотографии и информация относительно конкретного апартамента или все апартаменты могут быть размещены <code>вместе</code> на одной общей странице имеющей обощённую информацию</p>
+					<hr>
+					<h2>Гибкая связь с <span style="color: #4e8dbf">Booking.com</span></h2>
+					<p class="line-height-2">Если делать механизм резирвации апартаментов через <code>сайт</code> и дальше использовать <code>Booking.com</code>, то необходимо обеспечить автоматизированную связь между двумя сервисами, чтобы каждый из них имел необходимую информацию о количестве <code>свободных апартаментов</code></p>
+				</div>
+				<div class="col-7">
+					<div class="window">
+						<div class="window__bar">Start Page</div>
+						<div class="window__content-frame">
+							<div class="window__content">
+								<label class="d-block p-1 px-3 mb-0 mt-1">
+									<span class="text-dark">Ferienwohnung Villa Josephine</span>
+									(ниже изображение прошлого проекта)
+								</label>
+								<img src="img/screen.png" class="img-fluid rounded-bottom p-1">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p-5 bg-light">
+			<h2 class="text-secondary mb-3 text-center">Выбор основных цветов сайта</h2>
+			<div class="row">
+				<div class="col-8 text-light row mx-auto">
+					<div class="col-3">
+						<div class="shadow rounded palette-wrapper p-3 bg-white">
+							<div class="rounded-top p-3" style="background-color: #581845">
+								#581845
+							</div>
+							<div class="p-3" style="background-color: #900C3F">
+								#900C3F
+							</div>
+							<div class="p-3" style="background-color: #C70039">
+								#C70039
+							</div>
+							<div class="p-3" style="background-color: #FF5733">
+								#FF5733
+							</div>
+							<div class="rounded-bottom p-3" style="background-color: #FFC300">
+								#FFC300
+							</div>
+							<label class="px-3 pt-3 mb-0">
+								<i class="icon ion-ios-heart mr-3 text-danger"></i>Fire red palette
+							</label>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="shadow rounded palette-wrapper p-3 bg-white">
+							<div class="rounded-top p-3" style="background-color: #2A363B">
+								#2A363B
+							</div>
+							<div class="p-3" style="background-color: #E84A5F">
+								#E84A5F
+							</div>
+							<div class="p-3" style="background-color: #FF847C">
+								#FF847C
+							</div>
+							<div class="p-3" style="background-color: #FECEA8">
+								#FECEA8
+							</div>
+							<div class="rounded-bottom p-3" style="background-color: #99B898">
+								#99B898
+							</div>
+							<label class="px-3 pt-3 mb-0">
+								<i class="icon ion-ios-leaf mr-3 text-success"></i>Light green palette
+							</label>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="shadow rounded palette-wrapper p-3 bg-white">
+							<div class="rounded-top p-3" style="background-color: #355C7D">
+								#355C7D
+							</div>
+							<div class=" p-3" style="background-color: #6C5B7B">
+								#6C5B7B
+							</div>
+							<div class="p-3" style="background-color: #C06C84">
+								#C06C84
+							</div>
+							<div class="p-3" style="background-color: #F67280">
+								#F67280
+							</div>
+							<div class="rounded-bottom p-3" style="background-color: #F8B195">
+								#F8B195
+							</div>
+							<label class="px-3 pt-3 mb-0">
+								<i class="icon ion-ios-flask mr-3 text-primary"></i>Sunrise palette
+							</label>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="shadow rounded palette-wrapper p-3 bg-white">
+							<div class="rounded-top p-3" style="background-color: #264653">
+								#264653
+							</div>
+							<div class=" p-3" style="background-color: #2A9D8F">
+								#2A9D8F
+							</div>
+							<div class="p-3" style="background-color: #E6C46A">
+								#E6C46A
+							</div>
+							<div class="p-3" style="background-color: #F4A261">
+								#F4A261
+							</div>
+							<div class="rounded-bottom p-3" style="background-color: #E76F51">
+								#E76F51
+							</div>
+							<label class="px-3 pt-3 mb-0">
+								<i class="icon ion-ios-color-fill mr-3 text-info"></i>Mixed palette
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p-5 bg-white">
+			<div class="row">
+				<div class="col-6">
+					<div class="window">
+						<div class="window__bar">Admin Panel</div>
+						<div class="window__content-frame">
+							<div class="window__content">
+								<img src="img/admin.png" class="img-fluid rounded-bottom">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<h2>Статистика и панель управления сайтом</h2>
+					<p class="line-height-2">
+						Разработка отдельной части сайта, видимой только для авторизированных пользователей (администраторов). Здесь можно наблюдать тенденцию резервирования и прочую <code>статистику</code> сайта. Также можно управлять <code>группами пользователей</code> и апартаментами: добавлять новые апартаменты, изменять цену, корегировать информацию и прочее. Нажав <code>кнопку</code> внизу, можно увидеть пример подобной панели моего прошлого проекта.
+					</p>
+					<br>
+					<a class="text-white btn waves-effect waves-teal px-4" href="admin/index.html">
+						Узнать больше
+						<i class="icon ion-ios-arrow-round-forward ml-2"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="p-5 bg-white border-bottom">
+			<div class="row">
+				<div class="col-6">
+					<h2 class="mb-3 text-secondary">Пользовательские функции<i class="icon ion-ios-attach ml-3"></i></h2>
+					<ul class="line-height-2 pl-3">
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Просмотр апартаментов (фотографии, отзывы и другое)</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Онлайн бронирование выбранного апартамента</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Возможность оставлять отзывы после бронирования</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Возможность оплаты через определенные методы (PayPal)</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Онлайн-связь с владельцем (администрацией)</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Просмотр предлогаемых услгу в апартаменте</li>
+					</ul>
+				</div>
+				<div class="col-6">
+					<h2 class="mb-3 text-secondary">Возможности администрации<i class="icon ion-ios-crop ml-3"></i></h2>
+					<ul class="line-height-2 pl-3">
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Просмотр различной статистики</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Просмотр и управление пользовательскими группами</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Список въезжающих и выезжающий гостей в определенный день</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Управление и изменение параметров апартаментов</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Онлайн-чек после бронирования апартамента</li>
+						<li><i class="icon ion-ios-arrow-forward mr-3 text-success"></i>Возможность установки динамической цены (праздники, выходные)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="px-5 pt-5 pb-3 bg-light">
+			<div class="row">
+				<div class="col-8">
+					<h2 class="mb-3 text-secondary">Дополнительные возможности<i class="icon ion-ios-color-wand ml-3"></i></h2>
+					<p class="pl-3 line-height-2">
+						<code class="font-weight-bold">Скидки:</code> установка скидок для постоянных клиентов или для клиентов, бронирующих на длительный срок
+					</p>
+					<p class="pl-3 line-height-2">
+						<code class="font-weight-bold">Контакт:</code> возможность поддерживать контакт с клиентами и отвечать на их запросы. Дополнительно можно настроить рассылку новостей по электронной почты
+					</p>
+					<p class="pl-3 line-height-2">
+						<code class="font-weight-bold">Цена:</code> установка динамической цены на апартамент в зависимости от спроса, сезона, дня недели или праздника. Ручная установка фактора, который будет влиять на цену
+					</p>
+					<p class="pl-3 line-height-2">
+						<code class="font-weight-bold">Дизайн:</code> индивидуально выполненный дизайн сайта, который будет привлекать клиентов и оставлять их на сайте. Также можно разработать индивидуальный логотип сайта
+					</p>
+				</div>
+				<div class="col-4">
+					<img src="img/5.png" class="img-fluid">
+				</div>
+			</div>
+		</div>
+		<div class="px-5 pb-5 pt-3 bg-light">
+			<div class="row">
+				<div class="col-4 text-center px-5">
+					<img src="img/drafting-compass.png" class="img-fluid mb-3" style="max-height: 150px;">
+				</div>
+				<div class="col-4 text-center px-5">
+					<img src="img/rocket.png" class="img-fluid mb-3" style="max-height: 150px;">
+				</div>
+				<div class="col-4 text-center px-5">
+					<img src="img/light-bulb-icon.png" class="img-fluid mb-3" style="max-height: 150px;">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4 text-center px-5">
+					<p class="text-justify line-height-2">
+						<b>Многоязычность.</b> Сайт может поддерживать несколько языков, свободно переключаемых в верхней части окна. Основной язык <code>немецкий</code> и, сперва, можно добавить перевод на английский и русский.
+					</p>
+				</div>
+				<div class="col-4 text-center px-5">
+					<p class="text-justify line-height-2">
+						<b>Пользовательские отзывы.</b> С помощью этого механизма пользователи смогут оставлять <code>отзывы</code> и <code>оценки</code>. Так же  это можно подключить из Booking.com
+					</p>
+				</div>
+				<div class="col-4 text-center px-5">
+					<p class="text-justify line-height-2">
+						<b>Отзывчивый дизайн.</b> Дизайн и структуру сайта можно сделать таким образом, чтобы его можно было использовать с <code>любого устройства</code> (смартфон, планшет, ноутбук)
+					</p>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+	<footer class="page-footer bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<p class="grey-text text-lighten-4">Презентация для <b>Ferienwohnung Villa Josephine</b></p>
+					<span class="text-secondary">© 2019</span>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<p class="text-light">Contact</p>
+					<ul>
+						<li>
+							<a class="grey-text text-lighten-1 mr-3" href="https://github.com/rodchenk">
+								<i class="icon ion-logo-github mr-2 text-white"></i>Github
+							</a>
+							<a class="grey-text text-lighten-1" href="https://www.facebook.com/misha.rodchenkov">
+								<i class="icon ion-logo-facebook mr-2 text-white"></i>Facebook
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

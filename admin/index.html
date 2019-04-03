@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin panel</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ionicons/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="css/icode.css">
+</head>
+<body>
+
+	<div class="container-fluid row p-0 m-0">
+		<div class="sticky-top col-2" style="height: 100vh; z-index: 777; background-color: #30363c">
+			<div class="nav flex-column nav-pills mt-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			  	<div class="text-white rounded nav-pill-icode">
+			  		<div class="p-2 main-nav-pill-icode">
+				  		<i class="icon ion-ios-heart-empty px-2 py-1 bg-dark rounded d-inline-block"></i>
+				  		<span class="mx-2">My Profile</span>
+				  		<i class="mr-2 mt-1 icon ion-ios-arrow-forward float-right text-secondary"></i>
+				  	</div>
+			  	</div>
+			  	<div class="text-white rounded nav-pill-icode">
+			  		<div class="p-2 main-nav-pill-icode">
+				  		<i class="icon ion-ios-body px-2 py-1 bg-dark rounded d-inline-block"></i>
+				  		<span class="mx-2">All users</span>
+				  		<i class="mr-2 mt-1 icon ion-ios-arrow-forward float-right text-secondary"></i>
+				  	</div>
+				  		<div class="pl-3 sub-nav-pill-icode">
+					  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary">Bill Gates</a>
+					  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary">Mischa Rodchenkov</a>
+				  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary font-weight-bold">
+				  				Show all
+				  				<i class="icon ion-ios-arrow-round-forward px-2"></i>
+				  			</a>
+				  		</div>
+			  	</div>
+			  	<div class="text-white rounded nav-pill-icode">
+			  		<div class="p-2 main-nav-pill-icode">
+			  			<i class="icon ion-ios-git-compare px-2 py-1 bg-dark rounded d-inline-block"></i>
+				  		<span class="mx-2">All teams</span>
+				  		<span class="badge badge-warning">3</span>
+				  		<i class="mr-2 mt-1 icon ion-ios-arrow-forward float-right text-secondary"></i>
+			  		</div>
+				  		<div class="pl-3 sub-nav-pill-icode">
+				  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary">Translators</a>
+				  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary">Designers</a>
+				  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary font-weight-bold">
+				  				Show all
+				  				<i class="icon ion-ios-arrow-round-forward px-2"></i>
+				  			</a>
+				  		</div>
+			  	</div>
+			  	<div class="text-white rounded nav-pill-icode">
+			  		<div class="p-2 main-nav-pill-icode">
+				  		<i class="icon ion-ios-home px-2 py-1 bg-dark rounded d-inline-block"></i>
+				  		<span class="mx-2">All offices</span>
+				  		<i class="mr-2 mt-1 icon ion-ios-arrow-forward float-right text-secondary"></i>
+				  	</div>
+			  		<div class="pl-3 sub-nav-pill-icode">
+				  		<a href="#" class="mx-3 d-block py-1 px-2 text-secondary">Office Berlin</a>
+			  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary font-weight-bold">
+			  				Show all
+			  				<i class="icon ion-ios-arrow-round-forward px-2"></i>
+			  			</a>
+			  		</div>
+			  	</div>
+			  	<div class="text-white rounded nav-pill-icode">
+			  		<div class="p-2 main-nav-pill-icode">
+				  		<i class="icon ion-ios-send px-2 py-1 bg-dark rounded d-inline-block"></i>
+				  		<span class="mx-2">Messages</span>
+				  		<span class="badge badge-success">new</span>
+				  		<i class="mr-2 mt-1 icon ion-ios-arrow-forward float-right text-secondary"></i>
+				  	</div>
+			  		<div class="pl-3 sub-nav-pill-icode">
+				  		<a href="#" class="mx-3 d-block py-1 px-2 text-secondary">Hallo zusammen...</a>
+			  			<a href="#" class="mx-3 d-block py-1 px-2 text-secondary font-weight-bold">
+			  				Show all
+			  				<i class="icon ion-ios-arrow-round-forward px-2"></i>
+			  			</a>
+			  		</div>
+			  	</div>
+			  	<div class="text-white rounded nav-pill-icode">
+			  		<a href="#" target="_blanc" class="text-white" style="text-decoration: none;">
+				  		<div class="p-2 main-nav-pill-icode">
+					  		<i class="icon ion-ios-timer px-2 py-1 bg-dark rounded d-inline-block"></i>
+					  		<span class="mx-2">Cherokey</span>
+					  		<i class="mr-2 mt-1 icon ion-ios-arrow-forward float-right text-secondary"></i>
+					  	</div>
+				  	</a>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-10 container-fluid p-0">		
+			<div class="bg-white">
+				<div class="col-12 py-3 px-0">
+					<h3 class="text-danger text-left mb-4 pl-5">March, 2019</h3>
+					<canvas id="month_graph" height="50"></canvas>
+				</div>
+			</div>
+
+			<div class="col container-fluid mx-auto row border-bottom px-0 bg-dark">
+				<div class="col-4 p-3" style="background-color: #f5f7fb">
+					<canvas id="day_graph" class="mb-2"></canvas>
+				</div>
+				<div class="col-4 p-3" style="background-color: #dfe4ef">
+					<div class="mt-4">
+						<label class="pl-2 mb-0">Multi EEL</label>
+						<div class="progress bg-light" style="height: 10px;">
+		  					<div class="progress-bar" role="progressbar" style="width: 95%; background: linear-gradient(to right, #FF8A65, #EC407A)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+					<div class="mt-4">
+						<label class="pl-2 mb-0">Hardies</label>
+						<div class="progress bg-light" style="height: 10px;">
+		  					<div class="progress-bar" role="progressbar" style="width: 65%; background: linear-gradient(to right, #4DB6AC, #00897B)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+					<div class="mt-4">
+						<label class="pl-2 mb-0">Designers</label>
+						<div class="progress bg-light" style="height: 10px;">
+		  					<div class="progress-bar" role="progressbar" style="width: 80%;background: linear-gradient(to right, #5C6BC0, #42A5F5)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 p-3" style="background-color: #f5f7fb">
+					<canvas id="week_graph"></canvas>
+				</div>
+			</div>
+
+			<div class="container-fluid mx-auto row border-bottom pb-3 mt-3">
+				<!-- OFFICE start -->
+				<div class="col-3">
+					<div class="bg-white rounded shadow p-3">
+						<h3 class="text-danger text-center mt-2">Office</h3>
+						<div class="mt-3 rounded p-3 border-dashed text-center">
+							<a class="text-info" href="#"> 
+								<i class="mr-2 icon ion-ios-add"></i>Create new office
+							</a>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block float-right">
+								<a href="#" class="btn btn-light">Edit</a>
+							</div>
+							<p class="font-weight-bold">
+								<span class="very-rounded bg-success d-inline-block mr-2" style="width: 15px; height: 15px; vertical-align: middle; box-shadow: 0 0 15px #80e080"></span>
+								Hamburg
+							</p>
+							<span class="text-secondary">
+								Max. 24 work places<i class="ml-2 icon ion-ios-body"></i>
+							</span>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block float-right">
+								<a href="#" class="btn btn-light">Edit</a>
+							</div>
+							<p class="font-weight-bold">
+								<span class="very-rounded bg-danger d-inline-block mr-2" style="width: 15px; height: 15px; vertical-align: middle; box-shadow: 0 0 15px #dc356cad"></span>
+								Berlin
+							</p>
+							<span class="text-secondary">
+								Max. 30 work places<i class="ml-2 icon ion-ios-body"></i>
+							</span>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block float-right">
+								<a href="#" class="btn btn-light">Edit</a>
+							</div>
+							<p class="font-weight-bold">
+								<span class="very-rounded bg-danger d-inline-block mr-2" style="width: 15px; height: 15px; vertical-align: middle; box-shadow: 0 0 15px #dc356cad"></span>
+								Köln
+							</p>
+							<span class="text-secondary">
+								Max. 12 work places<i class="ml-2 icon ion-ios-body"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- OFFICE end -->
+				
+				<!-- TEAM start -->
+				<div class="col-3">
+					<div class="bg-white rounded shadow p-3">
+						<h3 class="text-danger text-center mt-2">Team</h3>
+						<div class="mt-3 rounded p-3 border-dashed text-center">
+							<a href="#" class="text-info">
+								<i class="mr-2 icon ion-ios-add"></i>Create new team
+							</a>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block float-right">
+								<a href="#" class="btn btn-light">Edit</a>
+							</div>
+							<p class="font-weight-bold">
+								Hardies
+							</p>
+							<span class="text-secondary">
+								Hardware engineer team
+							</span>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block float-right">
+								<a href="#" class="btn btn-light">Edit</a>
+							</div>
+							<p class="font-weight-bold">
+								Designers
+							</p>
+							<span class="text-secondary">
+								Webdesign team
+							</span>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block float-right">
+								<a href="#" class="btn btn-light">Edit</a>
+							</div>
+							<p class="font-weight-bold">
+								Multilangs
+							</p>
+							<span class="text-secondary">
+								Translators team
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- TEAM end -->
+				<!-- STATUS start -->
+				<div class="col-3">
+					<div class="bg-white rounded shadow p-3">
+						<h3 class="text-danger text-center mt-2">Status</h3>
+						<div class="mt-3 rounded p-3 border-dashed text-center">
+							<a href="#" class="text-info">
+								<i class="mr-2 icon ion-ios-add"></i>Create new status
+							</a>
+						</div>
+
+							<div class="mt-3 rounded bg-light p-3">
+								<div class="d-inline-block float-right">
+									<a href="#" class="btn btn-light">Edit</a>
+								</div>
+								<p class="font-weight-bold">
+									Vollzeit
+								</p>
+								<span class="text-secondary">
+									Max. 40 hours per Week<i class="ml-2 icon ion-md-alarm"></i>
+								</span>
+							</div>
+							<div class="mt-3 rounded bg-light p-3">
+								<div class="d-inline-block float-right">
+									<a href="#" class="btn btn-light">Edit</a>
+								</div>
+								<p class="font-weight-bold">
+									Teilzeit
+								</p>
+								<span class="text-secondary">
+									Max. 25 hours per Week<i class="ml-2 icon ion-md-alarm"></i>
+								</span>
+							</div>
+							<div class="mt-3 rounded bg-light p-3">
+								<div class="d-inline-block float-right">
+									<a href="#" class="btn btn-light">Edit</a>
+								</div>
+								<p class="font-weight-bold">
+									Student
+								</p>
+								<span class="text-secondary">
+									Max. 20 hours per Week<i class="ml-2 icon ion-md-alarm"></i>
+								</span>
+							</div>
+
+					</div>
+				</div>
+				<!-- STATUS end -->
+				<!-- USER start -->
+				<div class="col-3">
+					<div class="p-3 bg-white rounded shadow">
+						<h3 class="text-danger text-center mt-2">
+							Users
+						</h3>
+						<div class="mt-3 rounded p-3 border-dashed text-center">
+							<a href="#" class="text-info">
+								<i class="mr-2 icon ion-ios-add"></i>Create new user
+							</a>
+						</div>
+
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block very-rounded usr-ava-sm primary-button text-center font-weight-bold" 
+								style="background:linear-gradient(to right bottom, #673ab785, #af3ab785);box-shadow: unset">
+								MR
+							</div>
+							<div class="d-inline-block ml-3" style="vertical-align: top;">
+								<a href="#" class="font-weight-bold text-dark d-block">Mischa Rodchenkov</a>
+								<p class="text-secondary">
+									Student
+								</p>
+							</div>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block very-rounded usr-ava-sm primary-button text-center font-weight-bold" 
+								style="background:linear-gradient(to right bottom, #3a7db785, #74792085);box-shadow: unset">
+								SJ
+							</div>
+							<div class="d-inline-block ml-3" style="vertical-align: top;">
+								<a href="#" class="font-weight-bold text-dark d-block">Steve Jobs</a>
+								<p class="text-secondary">
+									Vollzeit
+								</p>
+							</div>
+						</div>
+						<div class="mt-3 rounded bg-light p-3">
+							<div class="d-inline-block very-rounded usr-ava-sm primary-button text-center font-weight-bold" 
+								style="background:linear-gradient(to right bottom, #3a7db7, #b73a3a85);box-shadow: unset">
+								BG
+							</div>
+							<div class="d-inline-block ml-3" style="vertical-align: top;">
+								<a href="#" class="font-weight-bold text-dark d-block">Bill Gates</a>
+								<p class="text-secondary">
+									Vollzeit
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- USER end -->
+			</div>
+
+			<div class="container-fluid mx-auto row border-bottom bg-white">
+				<!-- <div class="col-6 p-3"></div> -->
+				<div class="col-6 p-3">
+					<!-- Button trigger modal -->
+					<button type="button" class="btn very-rounded px-4 primary-button" data-toggle="modal" data-target="#exampleModalCenter">
+						New message
+						<i class="d-inline-block ml-2 icon ion-ios-arrow-round-forward"></i>
+					</button>
+					<!-- Modal -->
+					<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLongTitle">Write a new message</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body p-4">
+						            <div class="form-group">
+		            					<label for="recipient-name" class="col-form-label">Recipient:</label>
+		            					<input type="text" class="form-control" id="recipient-name" value="@all" readonly>
+		          					</div>
+									<div class="input-group mb-3">
+										<textarea spellcheck="false" style="height: 160px" class="form-control" placeholder="Write a new message. Note: it will be for everyone visible"></textarea>
+									</div>
+									<div class="text-right">
+										<button type="button" class="btn btn-light very-rounded mr-2" data-dismiss="modal">
+											Close
+										</button>
+										<button class="px-4 very-rounded btn primary-button float-right">
+											Send<i class="d-inline-block ml-2 icon ion-ios-arrow-round-forward"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal END -->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/chart.min.js"></script>
+	<script type="text/javascript" src="js/admin.js"></script>
+</body>
+</html>
