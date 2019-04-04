@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin panel</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../ionicons/ionicons.min.css">
+	<link rel="shortcut icon" type="image/ico" href="../img/favicon.ico"/>
+</head>
+<body class="bg-light">
+	<div class="container-fluid p-5">
+		<div class="row">
+			<div class="col-6">
+				<h2 class="text-secondary">Channel Manager<i class="ml-2 icon ion-ios-color-wand"></i></h2>
+				<p class="line-height-2">
+					В администраторскую панель необходимо интегрировать <code>отдельный сервис</code> (<span class="text-secondary">Channel Manager</span>), который даёт доступ к самым популярным площадкам объявлений о аренде жилья - их более 50, в том числе Booking.com и AirBNB. С прошлого года Booking закрыл свой открытый интерфейс для обычных пользователей, а с этого года и AirBNB. Эти интерфейсы открыты только для <code>партнеров</code> этих сервисов. Эти партнеры предлогают одну <code>единственную</code> точку, к которой можно отправлять автоматизированные запросы и получать всю необходимую информацию со всех добавленных сервисов, что гораздо упрощает поддержку и дальнейшее развитие приложения.  
+				</p>
+			</div>
+			<div class="col-6">
+				<img src="../img/channelmanager.png" class="img-fluid">
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-5 bg-white">
+		<div class="row">
+			<div class="col-6 text-center">
+				<img src="../img/CM2.gif" class="img-fluid">
+			</div>
+			<div class="col-6">
+				<h2 class="text-secondary mb-3">Property Management System<i class="ml-2 icon ion-ios-stats"></i></h2>
+				<p class="line-height-2">
+					С подобным механизмом можно обеспечить <code>синхронизацию</code> между системой резирвации на сайте и другими сервисами. Например, если через Booking клиент бронирует апартамент, то Property Management System будет оповещён и <code>обновит</code> количество всех свободных апартаментов на всех сервисах. Это обеспечит <code>безконфликтное</code> функционирование всех сервисов бронирования. 
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-5 bg-light">
+		<div class="row">
+			<div class="col-5">
+				<h2 class="text-secondary mb-3">Календарь бронирования<i class="ml-2 icon ion-ios-calendar"></i></h2>
+				<p class="line-height-2">
+					После синхронизации всех сервисов и сайта можно разработать календарь бронирования, на котором отмечены <code>гости</code> и <code>продолжительность</code> их пребывания. Также будет видно с какого сервиса была произведена бронь апартамента. <code>Общая статистика</code> будет расположена на другой странице, её вид и содержимое необходимо будет обсудить позже.
+				</p>
+			</div>
+			<div class="col-7">
+				<img src="../img/calendar.png" class="img-fluid">
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-5 bg-light">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="text-secondary mb-3">Использование Channel Manager<i class="ml-2 icon ion-ios-calendar"></i></h2>
+				<p class="line-height-2 text-justify">
+					Как было упомянуто выше, с недавнего времени действует <code>монополия</code> на автоматизированные запросы к сервисам вроде Booking. Только партнерские фирмы имеют доступ к их интерфейсам, они же предоставляют свои услуги в виде <code>Channel Manager</code> (см. первый раздел). Существует ограниченное количество таких фирм, они предоставляют облачные технологии, т.е. Channel Manager расположен на неком облаке, что обеспечивает его <code>бесперебойную</code> работу при любых нагрузках, а так же предоставляет плюс в том виде, что оплата происходит только за тот объем ресурсов, который был израсходован. Для небольшого отеля (&lt;200 запросов в день) объём ресурсов <code>минимальный</code>. Цена также варьируется от количества услуг, выгодней и лучше взять самый минимум - доступ к <code>необходимым</code> сервисам, без дополнительный избыточных функций. Почти все предлогают пробный бесплатный период от 2 до 4 недель, по этому можно поэксперементировать и подобрать <code>подходящий</code>. К сожалению без Channel Manager невозможно создать синхронизацию между сервисами и объединить всё в одном месте, так как Booking и другие полностью ограничили доступ к своим интерфейсам.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid p-5 bg-dark">
+		<div class="row">
+			<div class="col-4">
+				
+			</div>
+			<div class="col-8">
+				<div class="col-12 mb-3">
+					<h5 class="text-right">
+						<span class="text-white">Разработка администраторской панели:</span>
+						<span class="text-warning font-weight-bold">€ 1,500</span>
+					</h5>
+				</div>
+				<div class="col-12">
+					<h6 class="text-right">
+						<span class="text-light"><i class="mr-2 icon ion-ios-add"></i>ежемесечная плата за Channel Manager:</span>
+						<span class="text-warning">€ 20-70</span>
+					</h6>
+					<h6 class="text-right">
+						<span class="text-light"><i class="mr-2 icon ion-ios-add"></i>ежемесечная аренда сервера для сайта:</span>
+						<span class="text-warning">€ 10-50</span>
+					</h6>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
